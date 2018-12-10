@@ -29,7 +29,7 @@ func (repo *UserRepository) Store(u domain.User) (id int64, err error) {
 
 // FindByID find the user by id
 func (repo *UserRepository) FindByID(identifier int64) (user domain.User, err error) {
-	row, err := repo.Query("SELECT id, organization_id, name, email, country, administrator, created_at, updated_at FROM users WHERE id = ?", identifier)
+	row, err := repo.Query("SELECT id, name, email, created_at, updated_at FROM users WHERE id = ?", identifier)
 	defer row.Close()
 	if err != nil {
 		return
