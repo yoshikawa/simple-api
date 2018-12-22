@@ -8,7 +8,5 @@ ENV GOBIN /go/bin
 ADD . $GOPATH/src/github.com/yoshikawataiki/simple-api
 WORKDIR $GOPATH/src/github.com/yoshikawataiki/simple-api
 
-
-RUN go get bitbucket.org/liamstask/goose/cmd/goose
-# Go dep
-RUN go get -u github.com/golang/dep/... && dep ensure -vendor-only
+RUN go get bitbucket.org/liamstask/goose/cmd/goose  && \
+    go get -u github.com/golang/dep/cmd/dep

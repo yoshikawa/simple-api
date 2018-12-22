@@ -12,6 +12,16 @@ yoshikawataiki/simple-api − learning about HTTP
 |:--:|:--:|
 |go|1.11.2|
 
+## Usage
+
+MySQL Password is 'password'
+
+1. make docker/start
+2. make api/init
+3. make migrate/init
+4. make migrate/up
+5. make run
+
 ## Contribution
 
 1. [Fork it](https://github.com/yoshikawataiki/simple-api/fork)
